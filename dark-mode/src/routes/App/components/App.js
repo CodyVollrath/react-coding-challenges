@@ -8,7 +8,8 @@ function App() {
     //Code to Toggle Darkmode
   };
   return (
-    <div className={darkModeEnabled ? `${"dark-mode"} ${"app"}`: `${"app"}`}>
+    //TODO Change this 'false' to something else when you have a solution. Keep the ternary expression ex: <your change>? <if true>:<if false>
+    <div className={false ? `${"dark-mode"} ${"app"}`: `${"app"}`}>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
