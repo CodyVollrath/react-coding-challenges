@@ -4,15 +4,18 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../styles/_app.scss';
 
 function App() {
+  const toggleDarkMode = () => {
+    //Code to Toggle Darkmode
+  };
   return (
-    <div className="app">
+    <div className={darkModeEnabled ? `${"dark-mode"} ${"app"}`: `${"app"}`}>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
         </div>
 
         {/* --The button that should toggle dark mode-- */}
-        <button className="app__dark-mode-btn icon level-right">
+        <button className="app__dark-mode-btn icon level-right" onClick={toggleDarkMode}>
           <FontAwesomeIcon icon={faMoon} />
         </button>
 
