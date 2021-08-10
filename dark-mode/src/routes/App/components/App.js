@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../styles/_app.scss';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   const toggleDarkMode = () => {
     //Code to Toggle Darkmode
+    setDarkMode(!darkMode)
   };
   return (
     //TODO Change this 'false' to something else when you have a solution. Keep the ternary expression ex: <your change>? <if true>:<if false>
-    <div className={false ? `${"dark-mode"} ${"app"}`: `${"app"}`}>
+    <div className={darkMode ? `${"dark-mode"} ${"app"}`: `${"app"}`}>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
@@ -19,7 +22,6 @@ function App() {
         <button className="app__dark-mode-btn icon level-right" onClick={toggleDarkMode}>
           <FontAwesomeIcon icon={faMoon} />
         </button>
-
       </div>
 
       <div className="columns">
